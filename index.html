@@ -8,6 +8,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 	<link rel="stylesheet" href="style.css">
 	<title>BOOTSTAP ~ SITE</title>
 </head>
@@ -286,10 +287,45 @@
 			</div>
 		</div>
 	</section>
+	<!-- Contact And Map -->
+	<section class="p-5">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-md">
+					<h2 class="text-center mb-4">Contact Info</h2>
+					<ul class="list-group list-group-flush lead">
+						<li class="list-group-item">
+							<span class="fw-bold">Main Location</span> LVIV
+						</li>
+						<li class="list-group-item">
+							<span class="fw-bold">Student phone:</span> (321) 312-3212
+						</li>
+						<li class="list-group-item">
+							<span class="fw-bold">Email:</span> alexrsd@gmail.com
+						</li>
+					</ul>
+				</div>
+				<div class="col-md">
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
 		crossorigin="anonymous"></script>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleGFhc3MiLCJhIjoiY2tzNmhtbWt2Mm92bTJxbXNidm1ieGlseiJ9.QJS19ENa3VnhcZRsvyYDzg';
+		var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [-71.06043, 42.34532],
+			zoom: 18
+		});
+	</script>
 </body>
 
 </html>
